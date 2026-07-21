@@ -5,6 +5,7 @@ import Banner from '../layouts/Banner'
 import Category from '../layouts/Category'
 import SpecialProducts from '../layouts/SpecialProducts'
 import FeaturedProducts from '../layouts/FeaturedProducts'
+import TopProducts from '../layouts/TopProducts'
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
       <Category/>
       <SpecialProducts products={products}/>
       <FeaturedProducts products={products}/>
+      <TopProducts products={products}/>
     </div>
   )
 }

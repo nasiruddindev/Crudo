@@ -14,7 +14,7 @@ const SpecialProducts = ({products}) => {
           {
             products.slice(24,26).map((item,index)=>(
 
-              <SpCard src={item.thumbnail} title={item.title} salePrice={item.price} regularPrice={item.discountPercentage} description={item.description}/>
+              <SpCard key={index} src={item.thumbnail} title={item.title} salePrice={item.price} regularPrice={item.discountPercentage} description={item.description}/>
 
             ))
           }

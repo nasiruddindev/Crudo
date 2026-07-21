@@ -26,7 +26,7 @@ const FeaturedProducts = ({products}) => {
         {
           products.slice(25,31).map((item,index)=>(
 
-            <Card src={item.thumbnail} cetegory={item.category} title={item.title}/>
+            <Card key={index} src={item.thumbnail} category={item.category} title={item.title} salePrice={item.price}/>
           ))
         }
         </Flex>
