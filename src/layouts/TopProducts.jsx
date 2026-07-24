@@ -44,7 +44,7 @@ const TopProducts = ({
   console.log(products)
 
   return (
-    <section className="pb-100">
+    <section>
       <Container>
         <Flex className="items-center justify-between">
           <p className="w-4/12 text-lg text-primary font-karla font-medium">

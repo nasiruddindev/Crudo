@@ -6,6 +6,9 @@ import Category from '../layouts/Category'
 import SpecialProducts from '../layouts/SpecialProducts'
 import FeaturedProducts from '../layouts/FeaturedProducts'
 import TopProducts from '../layouts/TopProducts'
+import PopularBrands from '../layouts/PopularBrands'
+import Blog from '../layouts/Blog'
+import Footer from '../layouts/Footer'
 
 const Home = () => {
 
@@ -27,6 +30,9 @@ const Home = () => {
       <SpecialProducts products={products}/>
       <FeaturedProducts products={products}/>
       <TopProducts products={products}/>
+      <PopularBrands/>
+      <Blog products={products}/>
+      <Footer/>
     </div>
   )
 }
