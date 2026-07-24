@@ -23,8 +23,7 @@ const Home = () => {
 
   return (
     <div>
-      <Offer/>
-      <Navbar/>
+
       <Banner/>
       <Category/>
       <SpecialProducts products={products}/>
@@ -32,7 +31,6 @@ const Home = () => {
       <TopProducts products={products}/>
       <PopularBrands/>
       <Blog products={products}/>
-      <Footer/>
     </div>
   )
 }
