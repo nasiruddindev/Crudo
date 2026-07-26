@@ -152,8 +152,8 @@ const About = () => {
         <Container>
           <Flex className=" items-center pb-20 pt-40">
             <div className="w-6/12">
-              <div className="w-155 h-115 relative">
-                <Image src={AbTest} />
+              <div className="w-155 h-115 relative overflow-hidden">
+                <Image src={AbTest}  className="scale-100 transition-all ease-in-out hover:scale-110 duration-300"/>
                 <Image src={AbTest2} className="absolute -top-30 -left-20" />
               </div>
             </div>

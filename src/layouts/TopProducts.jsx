@@ -6,6 +6,7 @@ import { FaRegHeart, FaShoppingCart } from 'react-icons/fa'
 import Card from '../components/Card'
 import Image from '../components/Image'
 import Banner from '../assets/topbanner.png'
+import { Link } from 'react-router-dom'
 
 const TopProducts = ({
   products,
@@ -41,7 +42,6 @@ const TopProducts = ({
     return () => clearInterval(timer)
   }, [targetDate])
 
-  console.log(products)
 
   return (
     <section>
@@ -73,7 +73,9 @@ const TopProducts = ({
         <Flex className="gap-x-6 pt-7">
           <div className="w-140 ">
             {products.slice(15, 16).map((item, index) => (
+              <Link to={`details/${item.id}`} key={index}>
               <div>
+
                 <div className="w-full h-129 flex justify-center items-center ">
                   <Image src={item.thumbnail} className="w-full"/>
                 </div>
@@ -109,12 +111,14 @@ const TopProducts = ({
                   </div>
                 </div>
               </div>
+              </Link>
             ))}
           </div>
 
           <Flex className="w-214  flex-wrap gap-x-6 gap-y-20">
             {products.slice(18, 24).map((item, index) => (
               <Card
+                id={item.id}
                 key={index}
                 src={item.thumbnail}
                 category={item.category}

@@ -2,16 +2,21 @@ import React from 'react'
 import Flex from './Flex'
 import Image from './Image'
 import { FaRegHeart, FaShoppingCart } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
-const SpCard = ({src,title,description,salePrice}) => {
+const SpCard = ({id,src,title,description,salePrice}) => {
   return (
     <div className='w-174 bg-white rounded-md p-5 '>
       <Flex className="items-center justify-between">
         <div className='h-78 w-78 flex justify-center items-center cursor-pointer bg-offwhite'>
+          <Link to={`/details/${id}`}>
           <Image src={src}/>
+          </Link>
         </div>
         <div className='cursor-pointer'>
+          <Link to={`/details/${id}`}>
           <h3 className='text-xl text-primary font-bold font-serif'>{title}</h3>
+          </Link>
            <p className='text-primary text-base font-normal font-karla pt-3 max-w-70'>{description}</p>
           <p className='text-yellow text-lg font-normal font-karla py-5'>${salePrice}</p>
 

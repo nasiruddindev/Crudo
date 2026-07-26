@@ -13,7 +13,7 @@ const Blog = ({products}) => {
         <Flex className="justify-between pt-10">
           {
             products.slice(15,18).map((item,index)=>(
-              <BlogCard src={item.thumbnail} date={item.reviews[0].date} title={item.title} />
+              <BlogCard key={index} src={item.thumbnail} date={item.reviews[0].date} title={item.title} />
             ))
           }
         </Flex>
