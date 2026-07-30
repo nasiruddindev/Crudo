@@ -10,6 +10,8 @@ import RootLayout from './layouts/RootLayout'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import ProductDetailsPage from './pages/ProductDetailsPage'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />}></Route>
       <Route path="contact" element={<Contact />}></Route>
       <Route path="details/:id" element={<ProductDetailsPage />}></Route>
+      <Route path="cart" element={<Cart />}></Route>
+      <Route path="checkout" element={<Checkout />}></Route>
     </Route>
   )
 )
