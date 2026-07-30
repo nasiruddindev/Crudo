@@ -7,6 +7,7 @@ import { IoLocationOutline, IoMailOutline } from 'react-icons/io5'
 import { FaPhoneVolume } from 'react-icons/fa'
 import Title from '../components/Title'
 import Button from '../components/Button'
+import Input from '../components/Input'
 
 const Contact = () => {
   return (
@@ -21,11 +22,14 @@ const Contact = () => {
             <Title text="Send Us An Message" className="text-start"/>
 
             <div className='pt-7.5 flex gap-x-7.5'>
-              <input type="text" placeholder='Your Name ' className='px-5 py-4 border border-black/30 w-91.5 outline-none'/>
-              <input type="email" placeholder='Your Email ' className='px-5 py-4 border border-black/30 w-91.5 outline-none'/>
+              <Input type="text" placeholder='Your Name' />
+              <Input type="email" placeholder='Your Email' />
             </div>
-            <input type="email" placeholder='Number Phone' className='px-5 py-4 border border-black/30 w-190.75  outline-none my-6'/>
-            <textarea placeholder='Your Message' className='px-5 py-4  border border-black/30 w-190.75 h-58 outline-none'></textarea>
+            <Input type="tel" placeholder='Phone Number' className='my-6' />
+            <textarea
+              placeholder='Your Message'
+              className='w-full border border-offwhite rounded-xl px-4 py-3.5 text-sm font-karla outline-none focus:ring-2 focus:ring-secondary/10 transition-all duration-300 bg-white placeholder:text-offblack h-44 resize-none'
+            ></textarea>
 
             <Button text="SENT MESSAGE" className="mt-8"/>
           </div>
