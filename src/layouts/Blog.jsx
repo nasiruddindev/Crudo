@@ -3,8 +3,14 @@ import Container from '../components/Container'
 import Flex from '../components/Flex'
 import BlogCard from '../components/BlogCard'
 import Title from '../components/Title'
+import { Link } from 'react-router-dom'
 
 const Blog = ({products}) => {
+  const formatDate = (dateStr) => {
+    if (!dateStr) return 'Jan 01, 2024'
+    return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' })
+  }
+
   return (
     <section className='pb-20'>
       <Container>
@@ -13,7 +19,9 @@ const Blog = ({products}) => {
         <Flex className="justify-between pt-10">
           {
             products.slice(15,18).map((item,index)=>(
-              <BlogCard key={index} src={item.thumbnail} date={item.reviews[0].date} title={item.title} />
+              <Link key={index} to={`/blog/${item.id}`} className="block">
+                <BlogCard src={item.thumbnail} date={formatDate(item.meta?.createdAt || item.reviews?.[0]?.date)} title={item.title} />
+              </Link>
             ))
           }
         </Flex>
